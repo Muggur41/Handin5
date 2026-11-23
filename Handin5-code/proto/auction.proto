@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+package auction;
+
+option go_package = "Handin5/proto";
+
+//======================
+//Client facing messages
+//======================
+message BidRequest {
+    string bidder_id = 1;
+    int32 bid_amount = 2;
+}
+
+message BidResponse {
+    string status = 1; //"success, fail or exception"
+}
+
+message ResultRequest {
+}
+
+message ResultResponse {
+    bool is_over = 1;
+    string winner = 2;
+    int32 highest_bid = 3;
+}
+
+//======================
+//replication messages (between nodes)
+//======================
+
+message ReplicateRequest {
+    string highest_bidder = 1;
+    int32 highest_bid = 2;
+    bool is_over = 3;
+    int64 end_time = 4; //unix millis when the auction ends
+}
+
+message ReplicateResponse {
+    string status = 1;
+}
+
+//client facing service
+service Auction{
+    rpc Bid(BidRequest) returns (BidResponse);
+    rpc Result(ResultRequest) returns (ResultResponse);    
+}
+
+//Internal service for replication
+service Replication{
+    rpc Replicate(ReplicateRequest) returns (ReplicateResponse);
+}

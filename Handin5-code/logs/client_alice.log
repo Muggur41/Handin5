@@ -1,0 +1,11 @@
+Commands: 'bid <amount>' or 'result'
+Bid 10 -> success
+Bid 5 -> fail
+Auction running. Highest bid: 10 by alice
+--- primary killed ---
+Commands: 'bid <amount>' or 'result'
+2026/11/23 11:20:41 Node 0 did not answer, switching to next node
+Auction running. Highest bid: 20 by bob
+Bid 15 -> fail
+Bid 30 -> success
+Auction running. Highest bid: 30 by alice

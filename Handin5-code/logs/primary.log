@@ -1,0 +1,8 @@
+2026/11/23 11:20:38 Node started as primary on port 5001, auction ends at 11:20:53
+2026/11/23 11:20:39 Received bid from alice: 10
+2026/11/23 11:20:39 Registered new bidder alice
+2026/11/23 11:20:39 Bid accepted. Highest: alice with 10
+2026/11/23 11:20:39 Received bid from alice: 5
+2026/11/23 11:20:40 Received bid from bob: 20
+2026/11/23 11:20:40 Registered new bidder bob
+2026/11/23 11:20:40 Bid accepted. Highest: bob with 20

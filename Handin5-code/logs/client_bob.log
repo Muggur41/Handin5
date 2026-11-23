@@ -1,0 +1,6 @@
+Commands: 'bid <amount>' or 'result'
+Bid 20 -> success
+Commands: 'bid <amount>' or 'result'
+2026/11/23 11:20:55 Node 0 did not answer, switching to next node
+Auction is over. Winner: alice with 30
+Bid 99 -> fail
